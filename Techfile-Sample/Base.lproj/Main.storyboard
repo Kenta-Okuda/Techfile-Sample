@@ -1,25 +1,515 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZF-c0-vIK">
+                                <rect key="frame" x="-4" y="20" width="383" height="80"/>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DNp-xp-YJy"/>
+                                </constraints>
+                                <string key="text">Life is Tech!
+TECH FILE for Camp</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IkG-Dq-t0Q">
+                                <rect key="frame" x="-4" y="100" width="383" height="542"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="AXS-VN-G7p">
+                                        <rect key="frame" x="0.0" y="28" width="383" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AXS-VN-G7p" id="0vf-jd-KMm">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e14-Br-6cp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B7a-gq-Uch"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2016 Kenta Okuda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkc-hH-osg">
+                                <rect key="frame" x="-4" y="642" width="383" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="fhP-9j-Aqe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg6-Q7-zHf">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="20"/>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.62745098040000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="vUq-MN-3uc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lkc-hH-osg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1el-BJ-FNv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lkc-hH-osg" secondAttribute="trailing" constant="-20" id="36p-dg-4fh"/>
+                            <constraint firstItem="bg6-Q7-zHf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6EH-r0-KZD"/>
+                            <constraint firstItem="IkG-Dq-t0Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9PC-cR-APb"/>
+                            <constraint firstItem="bg6-Q7-zHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="As7-69-7Gu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lkc-hH-osg" secondAttribute="bottom" id="Idy-7k-PHm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0ZF-c0-vIK" secondAttribute="trailing" constant="-20" id="NPd-Br-0Ib"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bg6-Q7-zHf" secondAttribute="trailing" constant="-20" id="Q6j-DD-U3m"/>
+                            <constraint firstItem="IkG-Dq-t0Q" firstAttribute="top" secondItem="0ZF-c0-vIK" secondAttribute="bottom" id="WA7-Gx-Tqb"/>
+                            <constraint firstItem="0ZF-c0-vIK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="WX4-Ll-vhA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IkG-Dq-t0Q" secondAttribute="trailing" constant="-20" id="eWW-Kg-XWJ"/>
+                            <constraint firstItem="lkc-hH-osg" firstAttribute="top" secondItem="IkG-Dq-t0Q" secondAttribute="bottom" id="rzJ-kc-UGr"/>
+                            <constraint firstItem="0ZF-c0-vIK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xTU-dg-vmF"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="IkG-Dq-t0Q" id="P71-dR-yRK"/>
+                        <segue destination="ewl-No-j9e" kind="show" identifier="clock" id="m61-gP-xQe"/>
+                        <segue destination="2Xx-q8-UHD" kind="show" identifier="count" id="sb0-Be-GWw"/>
+                        <segue destination="yip-ma-we9" kind="show" identifier="calclator" id="ikj-zI-8dE"/>
+                        <segue destination="CVT-BR-YXR" kind="show" identifier="quiz" id="MEP-4f-cyM"/>
+                        <segue destination="5VF-SE-Czz" kind="show" identifier="nabeatsu" id="ZNk-Zr-k5s"/>
+                        <segue destination="yaB-Aa-NOy" kind="show" identifier="gacha" id="Cun-uw-Uy4"/>
+                        <segue destination="7TN-Q3-dDW" kind="show" identifier="clap" id="lxs-wo-JaY"/>
+                        <segue destination="N1O-OD-hxx" kind="show" identifier="word_list" id="9SI-2F-COl"/>
+                        <segue destination="zxU-F9-zIR" kind="show" identifier="bara" id="sk5-NS-Z2D"/>
+                        <segue destination="qSJ-Xc-JE8" kind="show" identifier="photo_master" id="vv8-U2-7Nq"/>
+                        <segue destination="23j-xV-Flm" kind="show" identifier="maze" id="yjN-sU-mk5"/>
+                        <segue destination="n8s-sx-Hu2" kind="show" identifier="tech_monstor" id="dsW-N7-Q6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="336.5"/>
+        </scene>
+        <!--Count View Controller-->
+        <scene sceneID="g1i-sO-Adr">
+            <objects>
+                <viewController id="2Xx-q8-UHD" customClass="CountViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vLm-Hs-oqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXO-Q4-7YK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a6R-pI-gKO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmN-vp-zyx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="A02-カウント" id="cR1-10-7JH">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="Xca-oz-Pwa">
+                                            <connections>
+                                                <segue destination="Tw2-Pb-hJR" kind="unwind" unwindAction="back:" id="Bp0-1U-jDI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onE-kU-xdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Tw2-Pb-hJR" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="-1965.5"/>
+        </scene>
+        <!--Clock View Controller-->
+        <scene sceneID="dxx-iM-5fY">
+            <objects>
+                <viewController id="ewl-No-j9e" customClass="ClockViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SA1-Kf-umv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ieU-jl-7FE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e3d-Oc-uQt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-cB-ovD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="A01-時計" id="O79-qF-9Ye">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="3HM-tq-xKG">
+                                            <connections>
+                                                <segue destination="AiM-jN-iSw" kind="unwind" unwindAction="back:" id="x00-fB-Yla"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WpP-n9-3c2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AiM-jN-iSw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="-2728.5"/>
+        </scene>
+        <!--Calclator View Controller-->
+        <scene sceneID="TRy-w7-jRO">
+            <objects>
+                <viewController id="yip-ma-we9" customClass="CalclatorViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5UK-Zg-WBj"/>
+                        <viewControllerLayoutGuide type="bottom" id="aLX-1F-zBn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hyA-nG-qOw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aa3-L6-cU3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="A04-電卓" id="ATC-Oj-0Bf">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="Bdy-HS-YDE">
+                                            <connections>
+                                                <segue destination="jP0-v0-fAr" kind="unwind" unwindAction="back:" id="qBk-FW-SrU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eud-58-eck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jP0-v0-fAr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="-1194.5"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="Od9-rL-S5M">
+            <objects>
+                <viewController id="CVT-BR-YXR" customClass="QuizViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="07j-u5-s10"/>
+                        <viewControllerLayoutGuide type="bottom" id="i5W-JB-PaS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wvt-Xr-klR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGQ-c4-vcq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="A05-クイズアプリ" id="BLA-Ux-ZeV">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="aLu-zD-IQb">
+                                            <connections>
+                                                <segue destination="VNn-Ca-TP8" kind="unwind" unwindAction="back:" id="t1z-mH-D8y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4W-8g-Kif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VNn-Ca-TP8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="-428.5"/>
+        </scene>
+        <!--Nabeatsu View Controller-->
+        <scene sceneID="q4d-bF-22T">
+            <objects>
+                <viewController id="5VF-SE-Czz" customClass="NabeatsuViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KmG-Or-JYt"/>
+                        <viewControllerLayoutGuide type="bottom" id="d9N-bh-E58"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a95-nB-kiG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daU-PI-nGN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="A06-なべあつ" id="xi7-Fw-NGE">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="a1A-5u-AW4">
+                                            <connections>
+                                                <segue destination="zw9-1r-1nU" kind="unwind" unwindAction="back:" id="JnQ-WN-44y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAu-Gu-3xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zw9-1r-1nU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="336.5"/>
+        </scene>
+        <!--Gacha View Controller-->
+        <scene sceneID="odW-dA-5fU">
+            <objects>
+                <viewController id="yaB-Aa-NOy" customClass="GachaViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="heg-wF-fo1"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Yl-I5-xc9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d58-IT-AY2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfa-ju-Yll">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="B01-ガチャアプリ" id="lcE-5X-Nuf">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="m2q-a8-4Se">
+                                            <connections>
+                                                <segue destination="mvc-8e-rlp" kind="unwind" unwindAction="back:" id="DjB-7U-Qrb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tf0-wN-ys7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mvc-8e-rlp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="1098.5"/>
+        </scene>
+        <!--Clap View Controller-->
+        <scene sceneID="ri0-8l-BoI">
+            <objects>
+                <viewController id="7TN-Q3-dDW" customClass="ClapViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4eg-Ly-1dw"/>
+                        <viewControllerLayoutGuide type="bottom" id="F70-5B-SNh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qE1-Qz-ZS3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-o2-DHw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="B02-クラップ" id="CIO-ZB-QBh">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="9q7-jd-QUT">
+                                            <connections>
+                                                <segue destination="cQi-hX-YJN" kind="unwind" unwindAction="back:" id="ulc-yX-9eM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLK-tj-NbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cQi-hX-YJN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="1871.5"/>
+        </scene>
+        <!--Word List View Controller-->
+        <scene sceneID="Y2z-NF-3Qs">
+            <objects>
+                <viewController id="N1O-OD-hxx" customClass="WordListViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s0o-w1-666"/>
+                        <viewControllerLayoutGuide type="bottom" id="ULs-qH-e9T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XqO-SW-bBh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oA-Tk-05y">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="B03-単語帳アプリ" id="nIF-sg-de9">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="VDf-s2-f0q">
+                                            <connections>
+                                                <segue destination="45j-uz-hZi" kind="unwind" unwindAction="back:" id="soU-rQ-hFT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIx-Io-KGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="45j-uz-hZi" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="2631.5"/>
+        </scene>
+        <!--Bara Bara View Controller-->
+        <scene sceneID="u0O-tO-aC0">
+            <objects>
+                <viewController id="zxU-F9-zIR" customClass="BaraBaraViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U1x-9T-X90"/>
+                        <viewControllerLayoutGuide type="bottom" id="FwB-S8-m5p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s3Y-mS-kJq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgs-0B-Kr8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="B04-バラバラゲーム" id="VMh-Ds-lkv">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="wY5-hM-Dhr">
+                                            <connections>
+                                                <segue destination="iCN-u0-GkX" kind="unwind" unwindAction="back:" id="gFX-se-mqc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMH-fk-V8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iCN-u0-GkX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="3405.5"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="zqd-Ei-2s1">
+            <objects>
+                <viewController id="qSJ-Xc-JE8" customClass="PhotoViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="udx-aj-1OF"/>
+                        <viewControllerLayoutGuide type="bottom" id="YbZ-zJ-91d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fyM-xR-bRF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xN6-5u-g5M">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="C01-フォトマスター" id="72B-Cp-ptY">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="eSu-Xf-KnV">
+                                            <connections>
+                                                <segue destination="aYT-OB-kLj" kind="unwind" unwindAction="back:" id="XFT-zP-N3w"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w23-Tw-f12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aYT-OB-kLj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="4170.5"/>
+        </scene>
+        <!--Maze View Controller-->
+        <scene sceneID="b1f-Bn-G7r">
+            <objects>
+                <viewController id="23j-xV-Flm" customClass="MazeViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pQg-0B-Wu3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gv1-YU-MPf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VaU-9L-yWl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87O-DC-5yu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="C02-迷路ゲーム" id="fEO-xH-83p">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="Rbo-dM-2Eq">
+                                            <connections>
+                                                <segue destination="Ciy-Jg-OjM" kind="unwind" unwindAction="back:" id="z2F-LA-pFp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZ4-jo-J8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ciy-Jg-OjM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="4928.5"/>
+        </scene>
+        <!--Tech Monstor View Controller-->
+        <scene sceneID="MH9-C8-aSk">
+            <objects>
+                <viewController id="n8s-sx-Hu2" customClass="TechMonstorViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="muC-LI-KKS"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ud-IU-2G9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dPB-uG-7qG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13Z-Dv-GnH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="C03-テクモン" id="hfU-4x-Rsi">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="BpT-dS-650">
+                                            <connections>
+                                                <segue destination="CKM-QJ-TYc" kind="unwind" unwindAction="back:" id="FdK-Yd-wEn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoI-lv-sz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CKM-QJ-TYc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="5696.5"/>
         </scene>
     </scenes>
 </document>

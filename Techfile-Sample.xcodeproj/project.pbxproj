@@ -15,6 +15,20 @@
 		84E4692D1D3559EC007BBB8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E4692B1D3559EC007BBB8E /* LaunchScreen.storyboard */; };
 		84E469381D3559ED007BBB8E /* Techfile_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469371D3559ED007BBB8E /* Techfile_SampleTests.swift */; };
 		84E469431D3559ED007BBB8E /* Techfile_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469421D3559ED007BBB8E /* Techfile_SampleUITests.swift */; };
+		84E469521D355DA9007BBB8E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469501D355DA9007BBB8E /* MainTableViewCell.swift */; };
+		84E469531D355DA9007BBB8E /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E469511D355DA9007BBB8E /* MainTableViewCell.xib */; };
+		84E469551D3567D0007BBB8E /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469541D3567D0007BBB8E /* ClockViewController.swift */; };
+		84E469571D3567E0007BBB8E /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469561D3567E0007BBB8E /* CountViewController.swift */; };
+		84E469591D3567F6007BBB8E /* CalclatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469581D3567F6007BBB8E /* CalclatorViewController.swift */; };
+		84E4695B1D356806007BBB8E /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4695A1D356806007BBB8E /* QuizViewController.swift */; };
+		84E4695D1D356811007BBB8E /* NabeatsuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4695C1D356811007BBB8E /* NabeatsuViewController.swift */; };
+		84E4695F1D35681C007BBB8E /* GachaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4695E1D35681C007BBB8E /* GachaViewController.swift */; };
+		84E469611D356823007BBB8E /* ClapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469601D356823007BBB8E /* ClapViewController.swift */; };
+		84E469631D356833007BBB8E /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469621D356833007BBB8E /* WordListViewController.swift */; };
+		84E469651D356842007BBB8E /* BaraBaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469641D356842007BBB8E /* BaraBaraViewController.swift */; };
+		84E469671D35684F007BBB8E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469661D35684F007BBB8E /* PhotoViewController.swift */; };
+		84E469691D356859007BBB8E /* MazeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469681D356859007BBB8E /* MazeViewController.swift */; };
+		84E4696B1D356868007BBB8E /* TechMonstorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4696A1D356868007BBB8E /* TechMonstorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		84E4693E1D3559ED007BBB8E /* Techfile-SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Techfile-SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E469421D3559ED007BBB8E /* Techfile_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Techfile_SampleUITests.swift; sourceTree = "<group>"; };
 		84E469441D3559ED007BBB8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E469501D355DA9007BBB8E /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		84E469511D355DA9007BBB8E /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		84E469541D3567D0007BBB8E /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		84E469561D3567E0007BBB8E /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		84E469581D3567F6007BBB8E /* CalclatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalclatorViewController.swift; sourceTree = "<group>"; };
+		84E4695A1D356806007BBB8E /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		84E4695C1D356811007BBB8E /* NabeatsuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NabeatsuViewController.swift; sourceTree = "<group>"; };
+		84E4695E1D35681C007BBB8E /* GachaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GachaViewController.swift; sourceTree = "<group>"; };
+		84E469601D356823007BBB8E /* ClapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClapViewController.swift; sourceTree = "<group>"; };
+		84E469621D356833007BBB8E /* WordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
+		84E469641D356842007BBB8E /* BaraBaraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaraBaraViewController.swift; sourceTree = "<group>"; };
+		84E469661D35684F007BBB8E /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		84E469681D356859007BBB8E /* MazeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MazeViewController.swift; sourceTree = "<group>"; };
+		84E4696A1D356868007BBB8E /* TechMonstorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechMonstorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +127,11 @@
 		84E4691E1D3559EC007BBB8E /* Techfile-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				84E4696C1D356876007BBB8E /* Apps */,
 				84E4691F1D3559EC007BBB8E /* AppDelegate.swift */,
 				84E469211D3559EC007BBB8E /* ViewController.swift */,
+				84E469501D355DA9007BBB8E /* MainTableViewCell.swift */,
+				84E469511D355DA9007BBB8E /* MainTableViewCell.xib */,
 				84E469231D3559EC007BBB8E /* Main.storyboard */,
 				84E469291D3559EC007BBB8E /* Assets.xcassets */,
 				84E4692B1D3559EC007BBB8E /* LaunchScreen.storyboard */,
@@ -126,6 +157,25 @@
 				84E469441D3559ED007BBB8E /* Info.plist */,
 			);
 			path = "Techfile-SampleUITests";
+			sourceTree = "<group>";
+		};
+		84E4696C1D356876007BBB8E /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				84E469581D3567F6007BBB8E /* CalclatorViewController.swift */,
+				84E4695C1D356811007BBB8E /* NabeatsuViewController.swift */,
+				84E469601D356823007BBB8E /* ClapViewController.swift */,
+				84E4695E1D35681C007BBB8E /* GachaViewController.swift */,
+				84E4696A1D356868007BBB8E /* TechMonstorViewController.swift */,
+				84E469661D35684F007BBB8E /* PhotoViewController.swift */,
+				84E469621D356833007BBB8E /* WordListViewController.swift */,
+				84E469641D356842007BBB8E /* BaraBaraViewController.swift */,
+				84E4695A1D356806007BBB8E /* QuizViewController.swift */,
+				84E469541D3567D0007BBB8E /* ClockViewController.swift */,
+				84E469561D3567E0007BBB8E /* CountViewController.swift */,
+				84E469681D356859007BBB8E /* MazeViewController.swift */,
+			);
+			name = Apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +284,7 @@
 			files = (
 				84E4692D1D3559EC007BBB8E /* LaunchScreen.storyboard in Resources */,
 				84E4692A1D3559EC007BBB8E /* Assets.xcassets in Resources */,
+				84E469531D355DA9007BBB8E /* MainTableViewCell.xib in Resources */,
 				84E469251D3559EC007BBB8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +310,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E469591D3567F6007BBB8E /* CalclatorViewController.swift in Sources */,
+				84E469571D3567E0007BBB8E /* CountViewController.swift in Sources */,
+				84E469631D356833007BBB8E /* WordListViewController.swift in Sources */,
 				84E469281D3559EC007BBB8E /* Techfile_Sample.xcdatamodeld in Sources */,
+				84E4695F1D35681C007BBB8E /* GachaViewController.swift in Sources */,
+				84E469611D356823007BBB8E /* ClapViewController.swift in Sources */,
+				84E4695B1D356806007BBB8E /* QuizViewController.swift in Sources */,
 				84E469221D3559EC007BBB8E /* ViewController.swift in Sources */,
+				84E469521D355DA9007BBB8E /* MainTableViewCell.swift in Sources */,
+				84E469651D356842007BBB8E /* BaraBaraViewController.swift in Sources */,
+				84E4695D1D356811007BBB8E /* NabeatsuViewController.swift in Sources */,
+				84E469671D35684F007BBB8E /* PhotoViewController.swift in Sources */,
+				84E469551D3567D0007BBB8E /* ClockViewController.swift in Sources */,
 				84E469201D3559EC007BBB8E /* AppDelegate.swift in Sources */,
+				84E469691D356859007BBB8E /* MazeViewController.swift in Sources */,
+				84E4696B1D356868007BBB8E /* TechMonstorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
