@@ -88,7 +88,6 @@ TECH FILE for Camp</string>
                         <segue destination="ewl-No-j9e" kind="show" identifier="clock" id="m61-gP-xQe"/>
                         <segue destination="2Xx-q8-UHD" kind="show" identifier="count" id="sb0-Be-GWw"/>
                         <segue destination="yip-ma-we9" kind="show" identifier="calclator" id="ikj-zI-8dE"/>
-                        <segue destination="CVT-BR-YXR" kind="show" identifier="quiz" id="MEP-4f-cyM"/>
                         <segue destination="5VF-SE-Czz" kind="show" identifier="nabeatsu" id="ZNk-Zr-k5s"/>
                         <segue destination="yaB-Aa-NOy" kind="show" identifier="gacha" id="Cun-uw-Uy4"/>
                         <segue destination="7TN-Q3-dDW" kind="show" identifier="clap" id="lxs-wo-JaY"/>
@@ -97,6 +96,7 @@ TECH FILE for Camp</string>
                         <segue destination="qSJ-Xc-JE8" kind="show" identifier="photo_master" id="vv8-U2-7Nq"/>
                         <segue destination="23j-xV-Flm" kind="show" identifier="maze" id="yjN-sU-mk5"/>
                         <segue destination="n8s-sx-Hu2" kind="show" identifier="tech_monstor" id="dsW-N7-Q6t"/>
+                        <segue destination="Cb5-PV-rSK" kind="show" identifier="quiz" id="C6h-gq-BY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -496,9 +496,57 @@ TECH FILE for Camp</string>
             <point key="canvasLocation" x="759.5" y="-1194.5"/>
         </scene>
         <!--Quiz View Controller-->
+        <scene sceneID="eYc-W2-lVf">
+            <objects>
+                <viewController id="Cb5-PV-rSK" customClass="QuizViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fSv-G6-Epq"/>
+                        <viewControllerLayoutGuide type="bottom" id="f5C-XI-8Qw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q59-nY-pHQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kO6-AP-MLd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="A05-クイズアプリ" id="Ic8-lg-LWL">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="pc9-L6-xT0">
+                                            <connections>
+                                                <segue destination="ofN-Ga-awB" kind="unwind" unwindAction="back:" id="sAO-Bj-Brh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="与えられた問題が「○」か「☓」かを選んで下さい。すべての問題に答え終わると、あなたの「一般常識レベル」が表示されます。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="thq-tx-K9o">
+                                <rect key="frame" x="37" y="116" width="300" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-kK-ide">
+                                <rect key="frame" x="72" y="475" width="230" height="80"/>
+                                <state key="normal" image="start.png"/>
+                                <connections>
+                                    <segue destination="CVT-BR-YXR" kind="show" id="7dP-2C-owm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.791714366" green="0.95088141029999995" blue="0.55500399970000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8i-Ah-Nzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ofN-Ga-awB" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759.5" y="-408.5"/>
+        </scene>
+        <!--Question View Controller-->
         <scene sceneID="Od9-rL-S5M">
             <objects>
-                <viewController id="CVT-BR-YXR" customClass="QuizViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CVT-BR-YXR" customClass="QuestionViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="07j-u5-s10"/>
                         <viewControllerLayoutGuide type="bottom" id="i5W-JB-PaS"/>
@@ -507,27 +555,89 @@ TECH FILE for Camp</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGQ-c4-vcq">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="A05-クイズアプリ" id="BLA-Ux-ZeV">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="aLu-zD-IQb">
-                                            <connections>
-                                                <segue destination="VNn-Ca-TP8" kind="unwind" unwindAction="back:" id="t1z-mH-D8y"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wj-NX-DL5">
+                                <rect key="frame" x="77" y="419" width="220" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="選択肢"/>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="CVT-BR-YXR" eventType="touchDown" id="Xwg-Vq-ZGH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vq-aj-Cey">
+                                <rect key="frame" x="77" y="488" width="220" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="選択肢"/>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="CVT-BR-YXR" eventType="touchDown" id="2oQ-Ag-DbM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqy-5q-k1J">
+                                <rect key="frame" x="77" y="554" width="220" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="選択肢"/>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="CVT-BR-YXR" eventType="touchDown" id="8iY-68-l9W"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-Wg-nSA">
+                                <rect key="frame" x="37" y="81" width="300" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.791714366" green="0.95088141029999995" blue="0.55500399970000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="choiceButtons1" destination="8Wj-NX-DL5" id="dbJ-LF-am3"/>
+                        <outlet property="choiceButtons2" destination="0Vq-aj-Cey" id="4vk-09-1Mm"/>
+                        <outlet property="choiceButtons3" destination="sqy-5q-k1J" id="jAt-cl-I7e"/>
+                        <outlet property="quizTextView" destination="IpX-Wg-nSA" id="kwy-gr-ltg"/>
+                        <segue destination="ZQo-5l-kGu" kind="show" identifier="toResultView" id="REN-2C-5HJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4W-8g-Kif" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="VNn-Ca-TP8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="759.5" y="-428.5"/>
+            <point key="canvasLocation" x="1205.5" y="-408.5"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="0FV-lW-Jo2">
+            <objects>
+                <viewController id="ZQo-5l-kGu" customClass="ResultViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oMt-iH-qIk"/>
+                        <viewControllerLayoutGuide type="bottom" id="PTJ-Qd-zRx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="umO-wq-daN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-mn-nhK">
+                                <rect key="frame" x="125" y="176" width="125" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx0-Vb-acq">
+                                <rect key="frame" x="107" y="485" width="160" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="タイトルへ戻る"/>
+                                <connections>
+                                    <segue destination="Cb5-PV-rSK" kind="show" id="3eo-S8-XCu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.791714366" green="0.95088141029999995" blue="0.55500399970000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="hsz-mn-nhK" id="phL-g3-B1n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gG8-JN-4jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640.5" y="-408.5"/>
         </scene>
         <!--Nabeatsu View Controller-->
         <scene sceneID="q4d-bF-22T">
@@ -803,6 +913,10 @@ TECH FILE for Camp</string>
         </scene>
     </scenes>
     <resources>
+        <image name="start.png" width="309" height="126"/>
         <image name="コロン.png" width="250" height="350"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3eo-S8-XCu"/>
+    </inferredMetricsTieBreakers>
 </document>
