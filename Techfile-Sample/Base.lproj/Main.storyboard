@@ -1344,6 +1344,9 @@ TECH FILE for Camp</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agg-0e-Wxf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="557"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xN6-5u-g5M">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
@@ -1356,10 +1359,34 @@ TECH FILE for Camp</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-jf-3xO">
+                                <rect key="frame" x="172" y="629" width="30" height="30"/>
+                                <state key="normal" title="合成"/>
+                                <connections>
+                                    <action selector="processButtonTapped:" destination="qSJ-Xc-JE8" eventType="touchDown" id="j5o-zw-xjU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHG-kE-UuP">
+                                <rect key="frame" x="13" y="629" width="75" height="30"/>
+                                <state key="normal" title="画像を取得"/>
+                                <connections>
+                                    <action selector="selectButtonTapped:" destination="qSJ-Xc-JE8" eventType="touchDown" id="zFq-Bh-8X7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auD-Ti-wyX">
+                                <rect key="frame" x="270" y="629" width="90" height="30"/>
+                                <state key="normal" title="アップロード"/>
+                                <connections>
+                                    <action selector="uploadButtonTapped:" destination="qSJ-Xc-JE8" eventType="touchDown" id="uZg-LK-ok1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="agg-0e-Wxf" id="URf-qB-un8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w23-Tw-f12" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="aYT-OB-kLj" userLabel="Exit" sceneMemberID="exit"/>
