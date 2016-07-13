@@ -63,6 +63,15 @@
 		84E469BB1D3608DA007BBB8E /* GachaResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469BA1D3608DA007BBB8E /* GachaResultViewController.swift */; };
 		84E469BE1D360B3A007BBB8E /* clap-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E469BC1D360B3A007BBB8E /* clap-button.png */; };
 		84E469BF1D360B3A007BBB8E /* clap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84E469BD1D360B3A007BBB8E /* clap.wav */; };
+		84E469C31D360E9E007BBB8E /* fin.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E469C01D360E9E007BBB8E /* fin.png */; };
+		84E469C41D360E9E007BBB8E /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E469C11D360E9E007BBB8E /* title_logo.png */; };
+		84E469C51D360E9E007BBB8E /* word_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E469C21D360E9E007BBB8E /* word_blank.png */; };
+		84E469CA1D3611B3007BBB8E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469C71D3611B3007BBB8E /* ListTableViewCell.swift */; };
+		84E469CB1D3611B3007BBB8E /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E469C81D3611B3007BBB8E /* ListTableViewCell.xib */; };
+		84E469CC1D3611B3007BBB8E /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469C91D3611B3007BBB8E /* ListTableViewController.swift */; };
+		84E469CE1D3612BA007BBB8E /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469CD1D3612BA007BBB8E /* FinishViewController.swift */; };
+		84E469D01D3612CC007BBB8E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469CF1D3612CC007BBB8E /* AddViewController.swift */; };
+		84E469D21D3612E9007BBB8E /* WordListQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469D11D3612E9007BBB8E /* WordListQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +154,15 @@
 		84E469BA1D3608DA007BBB8E /* GachaResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GachaResultViewController.swift; sourceTree = "<group>"; };
 		84E469BC1D360B3A007BBB8E /* clap-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clap-button.png"; sourceTree = "<group>"; };
 		84E469BD1D360B3A007BBB8E /* clap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clap.wav; sourceTree = "<group>"; };
+		84E469C01D360E9E007BBB8E /* fin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fin.png; sourceTree = "<group>"; };
+		84E469C11D360E9E007BBB8E /* title_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_logo.png; sourceTree = "<group>"; };
+		84E469C21D360E9E007BBB8E /* word_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = word_blank.png; sourceTree = "<group>"; };
+		84E469C71D3611B3007BBB8E /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		84E469C81D3611B3007BBB8E /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		84E469C91D3611B3007BBB8E /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		84E469CD1D3612BA007BBB8E /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		84E469CF1D3612CC007BBB8E /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		84E469D11D3612E9007BBB8E /* WordListQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,7 +321,14 @@
 		84E469731D356F80007BBB8E /* WordList */ = {
 			isa = PBXGroup;
 			children = (
+				84E469C61D360EA3007BBB8E /* images */,
 				84E469621D356833007BBB8E /* WordListViewController.swift */,
+				84E469C91D3611B3007BBB8E /* ListTableViewController.swift */,
+				84E469C71D3611B3007BBB8E /* ListTableViewCell.swift */,
+				84E469C81D3611B3007BBB8E /* ListTableViewCell.xib */,
+				84E469D11D3612E9007BBB8E /* WordListQuestionViewController.swift */,
+				84E469CF1D3612CC007BBB8E /* AddViewController.swift */,
+				84E469CD1D3612BA007BBB8E /* FinishViewController.swift */,
 			);
 			name = WordList;
 			sourceTree = "<group>";
@@ -396,6 +421,16 @@
 				84E469B41D36089E007BBB8E /* bg_blue@2x.png */,
 				84E469B51D36089E007BBB8E /* bg_gold@2x.png */,
 				84E469B61D36089E007BBB8E /* bg_red@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		84E469C61D360EA3007BBB8E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				84E469C01D360E9E007BBB8E /* fin.png */,
+				84E469C11D360E9E007BBB8E /* title_logo.png */,
+				84E469C21D360E9E007BBB8E /* word_blank.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -507,6 +542,7 @@
 				84E469A91D360887007BBB8E /* monster002.png in Resources */,
 				84E469BE1D360B3A007BBB8E /* clap-button.png in Resources */,
 				84E4698C1D3572C6007BBB8E /* 6.png in Resources */,
+				84E469C31D360E9E007BBB8E /* fin.png in Resources */,
 				84E469B91D36089E007BBB8E /* bg_red@2x.png in Resources */,
 				84E4698A1D3572C6007BBB8E /* 4.png in Resources */,
 				84E469B31D360893007BBB8E /* gacha@2x.png in Resources */,
@@ -519,6 +555,8 @@
 				84E4699B1D360083007BBB8E /* start.png in Resources */,
 				84E469AB1D360887007BBB8E /* monster004.png in Resources */,
 				84E469AA1D360887007BBB8E /* monster003.png in Resources */,
+				84E469CB1D3611B3007BBB8E /* ListTableViewCell.xib in Resources */,
+				84E469C51D360E9E007BBB8E /* word_blank.png in Resources */,
 				84E469881D3572C6007BBB8E /* 2.png in Resources */,
 				84E469B11D360887007BBB8E /* monster010.png in Resources */,
 				84E469901D3572C6007BBB8E /* haikei.png in Resources */,
@@ -526,6 +564,7 @@
 				84E469891D3572C6007BBB8E /* 3.png in Resources */,
 				84E4692A1D3559EC007BBB8E /* Assets.xcassets in Resources */,
 				84E4698F1D3572C6007BBB8E /* 9.png in Resources */,
+				84E469C41D360E9E007BBB8E /* title_logo.png in Resources */,
 				84E469991D36007A007BBB8E /* true.png in Resources */,
 				84E4698E1D3572C6007BBB8E /* 8.png in Resources */,
 				84E469A81D360887007BBB8E /* monster001.png in Resources */,
@@ -569,9 +608,13 @@
 				84E469281D3559EC007BBB8E /* Techfile_Sample.xcdatamodeld in Sources */,
 				84E469BB1D3608DA007BBB8E /* GachaResultViewController.swift in Sources */,
 				84E4695F1D35681C007BBB8E /* GachaViewController.swift in Sources */,
+				84E469D21D3612E9007BBB8E /* WordListQuestionViewController.swift in Sources */,
+				84E469CC1D3611B3007BBB8E /* ListTableViewController.swift in Sources */,
 				84E469611D356823007BBB8E /* ClapViewController.swift in Sources */,
 				84E4695B1D356806007BBB8E /* QuizViewController.swift in Sources */,
 				84E469221D3559EC007BBB8E /* ViewController.swift in Sources */,
+				84E469CA1D3611B3007BBB8E /* ListTableViewCell.swift in Sources */,
+				84E469D01D3612CC007BBB8E /* AddViewController.swift in Sources */,
 				84E469931D35FF39007BBB8E /* QuestionViewController.swift in Sources */,
 				84E469521D355DA9007BBB8E /* MainTableViewCell.swift in Sources */,
 				84E469651D356842007BBB8E /* BaraBaraViewController.swift in Sources */,
@@ -582,6 +625,7 @@
 				84E469691D356859007BBB8E /* MazeViewController.swift in Sources */,
 				84E4696B1D356868007BBB8E /* TechMonstorViewController.swift in Sources */,
 				84E469951D35FF4A007BBB8E /* ResultViewController.swift in Sources */,
+				84E469CE1D3612BA007BBB8E /* FinishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
