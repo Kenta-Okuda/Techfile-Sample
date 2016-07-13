@@ -736,6 +736,20 @@ TECH FILE for Camp</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gacha.png" translatesAutoresizingMaskIntoConstraints="NO" id="hnF-yA-n0N">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDx-h0-Y6M">
+                                <rect key="frame" x="142" y="421" width="91" height="49"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <state key="normal" title="まわす">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gacha" destination="yaB-Aa-NOy" eventType="touchDown" id="1ba-hB-6jU"/>
+                                    <segue destination="9Ax-m9-iSn" kind="presentation" identifier="result" id="5hK-vQ-Cw9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -745,6 +759,48 @@ TECH FILE for Camp</string>
                 <exit id="mvc-8e-rlp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="759.5" y="1098.5"/>
+        </scene>
+        <!--Gacha Result View Controller-->
+        <scene sceneID="2fz-Xo-HwF">
+            <objects>
+                <viewController id="9Ax-m9-iSn" customClass="GachaResultViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ttf-3q-4Wj"/>
+                        <viewControllerLayoutGuide type="bottom" id="0s3-nz-1T0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pbn-TC-HLe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-dB-05M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ant-mt-fTH">
+                                <rect key="frame" x="47" y="194" width="280" height="280"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87R-AP-fAh">
+                                <rect key="frame" x="137" y="539" width="100" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.54111693319999998" blue="0.2927743162" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="もどる">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="modoru" destination="9Ax-m9-iSn" eventType="touchDown" id="29s-H5-pQh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="haikeiImageView" destination="heJ-dB-05M" id="4vQ-NX-aBu"/>
+                        <outlet property="monsterImageView" destination="Ant-mt-fTH" id="zTr-qw-urt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3k0-3y-p4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211.5" y="1098.5"/>
         </scene>
         <!--Clap View Controller-->
         <scene sceneID="ri0-8l-BoI">
@@ -770,6 +826,13 @@ TECH FILE for Camp</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oeg-yH-k87">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-ZL-yjy">
+                                <rect key="frame" x="155" y="303" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -952,6 +1015,7 @@ TECH FILE for Camp</string>
         </scene>
     </scenes>
     <resources>
+        <image name="gacha.png" width="225" height="339"/>
         <image name="start.png" width="309" height="126"/>
         <image name="コロン.png" width="250" height="350"/>
     </resources>

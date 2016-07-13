@@ -21,6 +21,9 @@ class GachaViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func gacha() {
+        self.performSegueWithIdentifier("result", sender: nil)
+    }
 
     /*
     // MARK: - Navigation
