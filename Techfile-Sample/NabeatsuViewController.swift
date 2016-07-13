@@ -10,10 +10,14 @@ import UIKit
 
 class NabeatsuViewController: UIViewController {
 
+    var number: Int = 0
+    @IBOutlet var label: UILabel!
+    @IBOutlet var faceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        label.text = String(0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +25,38 @@ class NabeatsuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func isAho() ->Bool {
+        var checkNum: Int
+        checkNum = number
+        
+        if number % 3 == 0 {
+            return true
+        }
+        while checkNum != 0 {
+            if checkNum % 10 == 3 {
+                return true
+            } else {
+                checkNum /= 10
+            }
+        }
+        return false
+    }
+    
+    @IBAction func plusButton(){
+        number = number + 1
+        label.text = String(number)
+        if isAho() == true {
+            faceLabel.text = "ﾍ(ﾟ∀ﾟﾍ)ｱﾋｬ"
+        } else {
+            faceLabel.text = "(゜o゜)"
+        }
+    }
+    
+    @IBAction func clear() {
+        number = 0
+        label.text = String(number)
+        faceLabel.text = "(゜o゜)"
+    }
 
     /*
     // MARK: - Navigation
