@@ -10,7 +10,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
-    var quizArray = [AnyObject]()
+    var quizArray = [[AnyObject]]()
     
     //正解数
     var correctAnswer:Int = 0
@@ -26,7 +26,7 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var tmpArray = [AnyObject]()
+        var tmpArray = [[AnyObject]]()
         
         //------------------------ここから下にクイズを書く------------------------//
         tmpArray.append(["問題文1","選択肢","選択肢2","選択肢3",1])
@@ -80,6 +80,7 @@ class QuestionViewController: UIViewController {
             let resultView = segue.destinationViewController as! ResultViewController
             resultView.correctAnswer = self.correctAnswer
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
