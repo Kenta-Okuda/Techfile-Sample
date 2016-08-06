@@ -47,6 +47,10 @@ class AddViewController: UIViewController {
             japaneseTextField.text = ""
         }
     }
+    
+    @IBAction func modoru() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

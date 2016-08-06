@@ -5,6 +5,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="misaki_gothic.ttf">
+            <string>MisakiGothic</string>
+            <string>MisakiGothic</string>
+            <string>MisakiGothic</string>
+            <string>MisakiGothic</string>
+            <string>MisakiGothic</string>
+            <string>MisakiGothic</string>
+            <string>MisakiGothic</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -990,6 +1001,11 @@ TECH FILE for Camp</string>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="新規追加" id="Phd-EM-Gjl">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="PFR-lk-PL0">
+                            <connections>
+                                <action selector="modoru" destination="Ptu-jQ-MAm" id="02d-40-BHK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="agX-GX-kg8">
                             <connections>
                                 <action selector="saveWord" destination="Ptu-jQ-MAm" id="ZQQ-eq-wlZ"/>
@@ -1427,10 +1443,10 @@ TECH FILE for Camp</string>
             </objects>
             <point key="canvasLocation" x="759.5" y="4928.5"/>
         </scene>
-        <!--Tech Monstor View Controller-->
+        <!--Lobby View Controller-->
         <scene sceneID="MH9-C8-aSk">
             <objects>
-                <viewController id="n8s-sx-Hu2" customClass="TechMonstorViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n8s-sx-Hu2" customClass="LobbyViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="muC-LI-KKS"/>
                         <viewControllerLayoutGuide type="bottom" id="2ud-IU-2G9"/>
@@ -1451,15 +1467,145 @@ TECH FILE for Camp</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lobby.png" translatesAutoresizingMaskIntoConstraints="NO" id="KHx-ck-uaD">
+                                <rect key="frame" x="0.0" y="94" width="375" height="275"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNy-R7-5Af">
+                                <rect key="frame" x="20" y="104" width="132" height="31"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="スタミナ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EG-Xr-XvP">
+                                <rect key="frame" x="42" y="294" width="100" height="31"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lv. 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5c-hv-zzE">
+                                <rect key="frame" x="268" y="110" width="75" height="31"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pmg-7a-Kgl">
+                                <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OHA-OP-XRd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="31"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="falcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-5U-pED">
+                                <rect key="frame" x="100" y="165" width="175" height="134"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p0f-v1-Ag4">
+                                <rect key="frame" x="42" y="328" width="291" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-By-dGF">
+                                <rect key="frame" x="46" y="464" width="283" height="70"/>
+                                <state key="normal" title="Button" image="gold_button.png"/>
+                                <connections>
+                                    <segue destination="f1k-wA-5U0" kind="presentation" modalTransitionStyle="crossDissolve" id="Ql2-wt-CyL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="冒険に行く" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byV-56-XfJ">
+                                <rect key="frame" x="121" y="484" width="132" height="30"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="levelLabel" destination="y5c-hv-zzE" id="pdA-I6-1nA"/>
+                        <outlet property="nameLabel" destination="eNy-R7-5Af" id="zRL-SJ-CJz"/>
+                        <outlet property="staminaBar" destination="p0f-v1-Ag4" id="O4j-Kl-4wj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JoI-lv-sz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CKM-QJ-TYc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="759.5" y="5696.5"/>
+        </scene>
+        <!--Tech Monstor View Controller-->
+        <scene sceneID="Qfm-kH-U1s">
+            <objects>
+                <viewController id="f1k-wA-5U0" customClass="TechMonstorViewController" customModule="Techfile_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UzU-cp-Bh0"/>
+                        <viewControllerLayoutGuide type="bottom" id="B5l-rd-5ar"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="alT-zK-SVm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="battlebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-VK-eTF">
+                                <rect key="frame" x="0.0" y="94" width="375" height="275"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="iy8-GY-U3M">
+                                <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUY-f7-Sro">
+                                <rect key="frame" x="46" y="463" width="283" height="70"/>
+                                <state key="normal" title="Button" image="gold_button.png"/>
+                                <connections>
+                                    <action selector="enemyAttack" destination="f1k-wA-5U0" eventType="touchDown" id="Sc7-Wj-gjK"/>
+                                    <action selector="playerAttack" destination="f1k-wA-5U0" eventType="touchDown" id="osf-Ld-VzH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="s4e-LM-dpW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="31"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnm-RY-Twl">
+                                <rect key="frame" x="38" y="222" width="109" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="70x-c2-zx1">
+                                <rect key="frame" x="186" y="132" width="109" height="110"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Wx-du-ukj">
+                                <rect key="frame" x="179" y="286" width="150" height="2"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hdu-Cx-Bus">
+                                <rect key="frame" x="28" y="152" width="150" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvK-bP-2Ze">
+                                <rect key="frame" x="30" y="123" width="86" height="31"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfG-Nn-RNv">
+                                <rect key="frame" x="182" y="256" width="89" height="31"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="こうげき" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE2-ia-jB6">
+                                <rect key="frame" x="121" y="483" width="132" height="30"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="attackButton" destination="qUY-f7-Sro" id="T25-iC-A5X"/>
+                        <outlet property="attackLabel" destination="rE2-ia-jB6" id="hFP-Gs-xJX"/>
+                        <outlet property="backGroundImageView" destination="xcA-VK-eTF" id="co7-iZ-NSS"/>
+                        <outlet property="enemyHPBar" destination="Hdu-Cx-Bus" id="mgq-Ff-HSn"/>
+                        <outlet property="enemyImageView" destination="70x-c2-zx1" id="2MK-QY-cUZ"/>
+                        <outlet property="enemyNameLabel" destination="KvK-bP-2Ze" id="MZA-a3-wHL"/>
+                        <outlet property="playerHPBar" destination="1Wx-du-ukj" id="N6w-wA-v2C"/>
+                        <outlet property="playerImageView" destination="gnm-RY-Twl" id="hrN-VP-JgG"/>
+                        <outlet property="playerNameLabel" destination="hfG-Nn-RNv" id="gbf-yH-ssS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBf-hb-J3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.5" y="5696.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hOa-t9-s2c">
@@ -1483,9 +1629,14 @@ TECH FILE for Camp</string>
     </scenes>
     <resources>
         <image name="bar.png" width="546" height="6"/>
+        <image name="battlebg.png" width="320" height="160"/>
+        <image name="bgimage.jpg" width="1280" height="960"/>
         <image name="clap-button.png" width="100" height="100"/>
+        <image name="falcon.png" width="480" height="320"/>
         <image name="fin.png" width="231" height="238"/>
         <image name="gacha.png" width="225" height="339"/>
+        <image name="gold_button.png" width="800" height="245"/>
+        <image name="lobby.png" width="500" height="400"/>
         <image name="start.png" width="309" height="126"/>
         <image name="tail.png" width="74" height="74"/>
         <image name="title_logo.png" width="373" height="179"/>

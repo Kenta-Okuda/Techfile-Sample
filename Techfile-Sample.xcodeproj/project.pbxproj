@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		844531741D36314400090D1D /* lifeistech_logo_1280x720.png in Resources */ = {isa = PBXBuildFile; fileRef = 844531731D36314400090D1D /* lifeistech_logo_1280x720.png */; };
+		849435881D516A7700ABFE66 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849435721D516A7700ABFE66 /* Default-568h@2x.png */; };
+		849435891D516A7700ABFE66 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849435731D516A7700ABFE66 /* Default-667h@2x.png */; };
+		8494358A1D516A7700ABFE66 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849435741D516A7700ABFE66 /* Default-736h@3x.png */; };
+		8494358B1D516A7700ABFE66 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 849435761D516A7700ABFE66 /* misaki_gothic.ttf */; };
+		8494358C1D516A7700ABFE66 /* battlebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 849435781D516A7700ABFE66 /* battlebg.png */; };
+		8494358D1D516A7700ABFE66 /* bgimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849435791D516A7700ABFE66 /* bgimage.jpg */; };
+		8494358E1D516A7700ABFE66 /* falcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8494357A1D516A7700ABFE66 /* falcon.png */; };
+		8494358F1D516A7700ABFE66 /* gold_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8494357B1D516A7700ABFE66 /* gold_button.png */; };
+		849435901D516A7700ABFE66 /* lobby.png in Resources */ = {isa = PBXBuildFile; fileRef = 8494357C1D516A7700ABFE66 /* lobby.png */; };
+		849435911D516A7700ABFE66 /* waku.png in Resources */ = {isa = PBXBuildFile; fileRef = 8494357D1D516A7700ABFE66 /* waku.png */; };
+		849435921D516A7700ABFE66 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494357F1D516A7700ABFE66 /* Enemy.swift */; };
+		849435931D516A7700ABFE66 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849435801D516A7700ABFE66 /* Player.swift */; };
+		849435941D516A7700ABFE66 /* TechDraUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849435811D516A7700ABFE66 /* TechDraUtility.swift */; };
+		849435951D516A7700ABFE66 /* BGM_battle001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 849435831D516A7700ABFE66 /* BGM_battle001.mp3 */; };
+		849435961D516A7700ABFE66 /* lobby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 849435841D516A7700ABFE66 /* lobby.mp3 */; };
+		849435971D516A7700ABFE66 /* SE_attack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 849435851D516A7700ABFE66 /* SE_attack.mp3 */; };
+		849435981D516A7700ABFE66 /* SE_fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 849435861D516A7700ABFE66 /* SE_fanfare.mp3 */; };
+		849435991D516A7700ABFE66 /* SE_gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 849435871D516A7700ABFE66 /* SE_gameover.mp3 */; };
+		849435B11D563B2300ABFE66 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849435B01D563B2300ABFE66 /* LobbyViewController.swift */; };
 		84E469201D3559EC007BBB8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4691F1D3559EC007BBB8E /* AppDelegate.swift */; };
 		84E469221D3559EC007BBB8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E469211D3559EC007BBB8E /* ViewController.swift */; };
 		84E469251D3559EC007BBB8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E469231D3559EC007BBB8E /* Main.storyboard */; };
@@ -98,6 +117,25 @@
 
 /* Begin PBXFileReference section */
 		844531731D36314400090D1D /* lifeistech_logo_1280x720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lifeistech_logo_1280x720.png; sourceTree = "<group>"; };
+		849435721D516A7700ABFE66 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		849435731D516A7700ABFE66 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		849435741D516A7700ABFE66 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		849435761D516A7700ABFE66 /* misaki_gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = misaki_gothic.ttf; sourceTree = "<group>"; };
+		849435781D516A7700ABFE66 /* battlebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battlebg.png; sourceTree = "<group>"; };
+		849435791D516A7700ABFE66 /* bgimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgimage.jpg; sourceTree = "<group>"; };
+		8494357A1D516A7700ABFE66 /* falcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = falcon.png; sourceTree = "<group>"; };
+		8494357B1D516A7700ABFE66 /* gold_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold_button.png; sourceTree = "<group>"; };
+		8494357C1D516A7700ABFE66 /* lobby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lobby.png; sourceTree = "<group>"; };
+		8494357D1D516A7700ABFE66 /* waku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waku.png; sourceTree = "<group>"; };
+		8494357F1D516A7700ABFE66 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		849435801D516A7700ABFE66 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		849435811D516A7700ABFE66 /* TechDraUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechDraUtility.swift; sourceTree = "<group>"; };
+		849435831D516A7700ABFE66 /* BGM_battle001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_battle001.mp3; sourceTree = "<group>"; };
+		849435841D516A7700ABFE66 /* lobby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lobby.mp3; sourceTree = "<group>"; };
+		849435851D516A7700ABFE66 /* SE_attack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_attack.mp3; sourceTree = "<group>"; };
+		849435861D516A7700ABFE66 /* SE_fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_fanfare.mp3; sourceTree = "<group>"; };
+		849435871D516A7700ABFE66 /* SE_gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_gameover.mp3; sourceTree = "<group>"; };
+		849435B01D563B2300ABFE66 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		84E4691C1D3559EC007BBB8E /* Techfile-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Techfile-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E4691F1D3559EC007BBB8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E469211D3559EC007BBB8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +244,71 @@
 				844531731D36314400090D1D /* lifeistech_logo_1280x720.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		849435701D516A7700ABFE66 /* techmon-resource */ = {
+			isa = PBXGroup;
+			children = (
+				849435711D516A7700ABFE66 /* Defaults */,
+				849435751D516A7700ABFE66 /* Fonts */,
+				849435771D516A7700ABFE66 /* Images */,
+				8494357E1D516A7700ABFE66 /* Models */,
+				849435821D516A7700ABFE66 /* Sounds */,
+			);
+			path = "techmon-resource";
+			sourceTree = "<group>";
+		};
+		849435711D516A7700ABFE66 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				849435721D516A7700ABFE66 /* Default-568h@2x.png */,
+				849435731D516A7700ABFE66 /* Default-667h@2x.png */,
+				849435741D516A7700ABFE66 /* Default-736h@3x.png */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+		849435751D516A7700ABFE66 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				849435761D516A7700ABFE66 /* misaki_gothic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		849435771D516A7700ABFE66 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				849435781D516A7700ABFE66 /* battlebg.png */,
+				849435791D516A7700ABFE66 /* bgimage.jpg */,
+				8494357A1D516A7700ABFE66 /* falcon.png */,
+				8494357B1D516A7700ABFE66 /* gold_button.png */,
+				8494357C1D516A7700ABFE66 /* lobby.png */,
+				8494357D1D516A7700ABFE66 /* waku.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8494357E1D516A7700ABFE66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8494357F1D516A7700ABFE66 /* Enemy.swift */,
+				849435801D516A7700ABFE66 /* Player.swift */,
+				849435811D516A7700ABFE66 /* TechDraUtility.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		849435821D516A7700ABFE66 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				849435831D516A7700ABFE66 /* BGM_battle001.mp3 */,
+				849435841D516A7700ABFE66 /* lobby.mp3 */,
+				849435851D516A7700ABFE66 /* SE_attack.mp3 */,
+				849435861D516A7700ABFE66 /* SE_fanfare.mp3 */,
+				849435871D516A7700ABFE66 /* SE_gameover.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		84E469131D3559EC007BBB8E = {
@@ -382,7 +485,9 @@
 		84E469771D356FE4007BBB8E /* TechMonstor */ = {
 			isa = PBXGroup;
 			children = (
+				849435701D516A7700ABFE66 /* techmon-resource */,
 				84E4696A1D356868007BBB8E /* TechMonstorViewController.swift */,
+				849435B01D563B2300ABFE66 /* LobbyViewController.swift */,
 			);
 			name = TechMonstor;
 			sourceTree = "<group>";
@@ -571,18 +676,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E469A91D360887007BBB8E /* monster002.png in Resources */,
+				849435901D516A7700ABFE66 /* lobby.png in Resources */,
 				84E469BE1D360B3A007BBB8E /* clap-button.png in Resources */,
 				84E4698C1D3572C6007BBB8E /* 6.png in Resources */,
+				8494358F1D516A7700ABFE66 /* gold_button.png in Resources */,
 				84E469C31D360E9E007BBB8E /* fin.png in Resources */,
+				849435981D516A7700ABFE66 /* SE_fanfare.mp3 in Resources */,
 				84E469B91D36089E007BBB8E /* bg_red@2x.png in Resources */,
 				84E4698A1D3572C6007BBB8E /* 4.png in Resources */,
+				8494358D1D516A7700ABFE66 /* bgimage.jpg in Resources */,
+				849435881D516A7700ABFE66 /* Default-568h@2x.png in Resources */,
 				84E469B31D360893007BBB8E /* gacha@2x.png in Resources */,
+				8494358B1D516A7700ABFE66 /* misaki_gothic.ttf in Resources */,
 				84E469AF1D360887007BBB8E /* monster008.png in Resources */,
+				849435961D516A7700ABFE66 /* lobby.mp3 in Resources */,
 				84E4698B1D3572C6007BBB8E /* 5.png in Resources */,
 				84E4698D1D3572C6007BBB8E /* 7.png in Resources */,
 				84E4692D1D3559EC007BBB8E /* LaunchScreen.storyboard in Resources */,
 				84E469AC1D360887007BBB8E /* monster005.png in Resources */,
 				84E469861D3572C6007BBB8E /* 0.png in Resources */,
+				849435971D516A7700ABFE66 /* SE_attack.mp3 in Resources */,
 				84E4699B1D360083007BBB8E /* start.png in Resources */,
 				844531741D36314400090D1D /* lifeistech_logo_1280x720.png in Resources */,
 				84E469AB1D360887007BBB8E /* monster004.png in Resources */,
@@ -590,17 +703,23 @@
 				84E469CB1D3611B3007BBB8E /* ListTableViewCell.xib in Resources */,
 				84E469C51D360E9E007BBB8E /* word_blank.png in Resources */,
 				84E469881D3572C6007BBB8E /* 2.png in Resources */,
+				849435951D516A7700ABFE66 /* BGM_battle001.mp3 in Resources */,
 				84E469B11D360887007BBB8E /* monster010.png in Resources */,
 				84E469901D3572C6007BBB8E /* haikei.png in Resources */,
 				84E469D81D36189B007BBB8E /* tail.png in Resources */,
 				84E469B01D360887007BBB8E /* monster009.png in Resources */,
 				84E469DA1D3618A5007BBB8E /* bar.png in Resources */,
 				84E469891D3572C6007BBB8E /* 3.png in Resources */,
+				8494358E1D516A7700ABFE66 /* falcon.png in Resources */,
+				849435991D516A7700ABFE66 /* SE_gameover.mp3 in Resources */,
+				8494358C1D516A7700ABFE66 /* battlebg.png in Resources */,
 				84E4692A1D3559EC007BBB8E /* Assets.xcassets in Resources */,
 				84E4698F1D3572C6007BBB8E /* 9.png in Resources */,
 				84E469C41D360E9E007BBB8E /* title_logo.png in Resources */,
 				84E469991D36007A007BBB8E /* true.png in Resources */,
 				84E4698E1D3572C6007BBB8E /* 8.png in Resources */,
+				8494358A1D516A7700ABFE66 /* Default-736h@3x.png in Resources */,
+				849435911D516A7700ABFE66 /* waku.png in Resources */,
 				84E469A81D360887007BBB8E /* monster001.png in Resources */,
 				84E469BF1D360B3A007BBB8E /* clap.wav in Resources */,
 				84E469AD1D360887007BBB8E /* monster006.png in Resources */,
@@ -610,6 +729,7 @@
 				84E469971D36006C007BBB8E /* false.png in Resources */,
 				84E469531D355DA9007BBB8E /* MainTableViewCell.xib in Resources */,
 				84E469B71D36089E007BBB8E /* bg_blue@2x.png in Resources */,
+				849435891D516A7700ABFE66 /* Default-667h@2x.png in Resources */,
 				84E469AE1D360887007BBB8E /* monster007.png in Resources */,
 				84E469251D3559EC007BBB8E /* Main.storyboard in Resources */,
 			);
@@ -637,10 +757,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E469591D3567F6007BBB8E /* CalclatorViewController.swift in Sources */,
+				849435941D516A7700ABFE66 /* TechDraUtility.swift in Sources */,
 				84E469571D3567E0007BBB8E /* CountViewController.swift in Sources */,
 				84E469631D356833007BBB8E /* WordListViewController.swift in Sources */,
 				84E469281D3559EC007BBB8E /* Techfile_Sample.xcdatamodeld in Sources */,
+				849435931D516A7700ABFE66 /* Player.swift in Sources */,
 				84E469BB1D3608DA007BBB8E /* GachaResultViewController.swift in Sources */,
+				849435921D516A7700ABFE66 /* Enemy.swift in Sources */,
 				84E469D51D361857007BBB8E /* GameViewController.swift in Sources */,
 				84E4695F1D35681C007BBB8E /* GachaViewController.swift in Sources */,
 				84E469D21D3612E9007BBB8E /* WordListQuestionViewController.swift in Sources */,
@@ -654,6 +777,7 @@
 				84E469D61D361857007BBB8E /* RankingViewController.swift in Sources */,
 				84E469521D355DA9007BBB8E /* MainTableViewCell.swift in Sources */,
 				84E469651D356842007BBB8E /* BaraBaraViewController.swift in Sources */,
+				849435B11D563B2300ABFE66 /* LobbyViewController.swift in Sources */,
 				84E4695D1D356811007BBB8E /* NabeatsuViewController.swift in Sources */,
 				84E469671D35684F007BBB8E /* PhotoViewController.swift in Sources */,
 				84E469551D3567D0007BBB8E /* ClockViewController.swift in Sources */,

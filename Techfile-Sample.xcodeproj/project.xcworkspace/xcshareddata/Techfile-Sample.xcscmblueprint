@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "233FA2FBC242888AFF3C6B93A3FCC80C3AD66D01",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2670A93C4D9D15621A555256A8C78E487A2CB818" : 0,
+    "233FA2FBC242888AFF3C6B93A3FCC80C3AD66D01" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1C530918-8843-4C33-A00C-3D466AED701F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2670A93C4D9D15621A555256A8C78E487A2CB818" : "Techfile-Sample\/Techfile-Sample\/techmon-resource\/",
+    "233FA2FBC242888AFF3C6B93A3FCC80C3AD66D01" : "Techfile-Sample\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Techfile-Sample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Techfile-Sample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Kenta-Okuda\/Techfile-Sample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "233FA2FBC242888AFF3C6B93A3FCC80C3AD66D01"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.life-is-tech.com:ios-camp\/techmon-resource.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2670A93C4D9D15621A555256A8C78E487A2CB818"
+    }
+  ]
+}
