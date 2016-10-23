@@ -19,15 +19,15 @@ class WordListQuestionViewController: UIViewController {
     var shuffledWordArray: [AnyObject] = []
     var nowNumber: Int = 0
     
-    let saveData = NSUserDefaults.standardUserDefaults()
+    let saveData = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         answerLabel.text = ""
     }
     
-    override func viewWillAppear(animated: Bool) {
-        wordArray = saveData.arrayForKey("WORD")!
+    override func viewWillAppear(_ animated: Bool) {
+        wordArray = saveData.array(forKey: "WORD")! as [AnyObject]
         shuffle()
         questionLabel.text = shuffledWordArray[nowNumber]["english"] as? String
         print("viewWillAppear") //for debug
@@ -35,9 +35,9 @@ class WordListQuestionViewController: UIViewController {
     
     func shuffle() {
         while wordArray.count > 0 {
-            let index = Int(rand()) % wordArray.count
+            let index = Int(arc4random()) % wordArray.count
             shuffledWordArray.append(wordArray[index])
-            wordArray.removeAtIndex(index)
+            wordArray.remove(at: index)
             print("shuffle") //for debug
         }
     }
@@ -50,14 +50,14 @@ class WordListQuestionViewController: UIViewController {
             if nowNumber < shuffledWordArray.count {
                 questionLabel.text = shuffledWordArray[nowNumber]["english"] as? String
                 isAnswered = false
-                nextButton.setTitle("答えを表示", forState: UIControlState.Normal)
+                nextButton.setTitle("答えを表示", for: UIControlState())
             } else {
-                self.performSegueWithIdentifier("toFinishView", sender: nil)
+                self.performSegue(withIdentifier: "toFinishView", sender: nil)
             }
         } else {
             answerLabel.text = shuffledWordArray[nowNumber]["japanese"] as? String
             isAnswered = true
-            nextButton.setTitle("次へ", forState: UIControlState.Normal)
+            nextButton.setTitle("次へ", for: UIControlState())
         }
     }
     

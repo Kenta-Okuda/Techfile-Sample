@@ -43,11 +43,11 @@ class CountViewController: UIViewController {
     }
     
     func changeColor() {
-        label.textColor = UIColor.blackColor()
+        label.textColor = UIColor.black
         if number >= 10 {
-            label.textColor = UIColor.redColor()
+            label.textColor = UIColor.red
         } else if number <= -10 {
-            label.textColor = UIColor.blueColor()
+            label.textColor = UIColor.blue
         }
     }
 

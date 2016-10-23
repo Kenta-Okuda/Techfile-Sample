@@ -21,24 +21,24 @@ class WordListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func back(segue: UIStoryboardSegue){
+    @IBAction func back(_ segue: UIStoryboardSegue){
         
     }
     
     @IBAction func startButtonTapped() {
-        let saveData = NSUserDefaults.standardUserDefaults()
+        let saveData = UserDefaults.standard
         
-        if let wordArray = saveData.arrayForKey("WORD") {
+        if let wordArray = saveData.array(forKey: "WORD") {
             if wordArray.count  > 0 {
-                self.performSegueWithIdentifier("toQuestionView", sender: nil)
+                self.performSegue(withIdentifier: "toQuestionView", sender: nil)
                 return
             }
         }
         
-        let alert: UIAlertController = UIAlertController(title: "単語", message: "まずは「単語一覧」をタップして単語登録をしてください", preferredStyle: .Alert)
+        let alert: UIAlertController = UIAlertController(title: "単語", message: "まずは「単語一覧」をタップして単語登録をしてください", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
     /*

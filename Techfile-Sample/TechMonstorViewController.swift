@@ -10,8 +10,8 @@ import UIKit
 
 class TechMonstorViewController: UIViewController {
 
-    var timer: NSTimer!
-    var enemyTimer: NSTimer!
+    var timer: Timer!
+    var enemyTimer: Timer!
     
     var enemy: Enemy!
     var player: Player!
@@ -35,11 +35,11 @@ class TechMonstorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        enemyHPBar.transform = CGAffineTransformMakeScale(1.0, 4.0)
-        playerHPBar.transform = CGAffineTransformMakeScale(1.0, 4.0)
+        enemyHPBar.transform = CGAffineTransform(scaleX: 1.0, y: 4.0)
+        playerHPBar.transform = CGAffineTransform(scaleX: 1.0, y: 4.0)
         initStatus()
         
-        enemyTimer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(enemy.speed), target: self, selector: #selector(self.enemyAttack), userInfo: nil, repeats: true)
+        enemyTimer = Timer.scheduledTimer(timeInterval: TimeInterval(enemy.speed), target: self, selector: #selector(self.enemyAttack), userInfo: nil, repeats: true)
         enemyTimer.fire()
     }
     
@@ -71,7 +71,7 @@ class TechMonstorViewController: UIViewController {
         }
     }
     
-    @IBAction func enemyAttack() {
+    func enemyAttack() {
         TechDraUtility.damageAnimation(enemyImageView)
         util.playBGM("SE_attack")
         
@@ -83,7 +83,7 @@ class TechMonstorViewController: UIViewController {
         }
     }
     
-    func finishBattle(vanishImageView: UIImageView, winPlayer: Bool) {
+    func finishBattle(_ vanishImageView: UIImageView, winPlayer: Bool) {
         TechDraUtility.vanishAnimation(vanishImageView)
         util.stopBGM()
         timer.invalidate()
@@ -91,9 +91,9 @@ class TechMonstorViewController: UIViewController {
         
         var finishMessage: String!
         
-        if attackButton.hidden != true {
-            attackButton.hidden = true
-            attackLabel.hidden = true
+        if attackButton.isHidden != true {
+            attackButton.isHidden = true
+            attackLabel.isHidden = true
         }
         
         if winPlayer == true {
@@ -104,14 +104,14 @@ class TechMonstorViewController: UIViewController {
             finishMessage = "プレイヤーの敗北..."
         }
         
-        let alert = UIAlertController(title: "バトル終了", message: finishMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in self.dismissViewControllerAnimated(true, completion: nil)}))
+        let alert = UIAlertController(title: "バトル終了", message: finishMessage, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismiss(animated: true, completion: nil)}))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func cureHP() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.updateHPValue), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateHPValue), userInfo: nil, repeats: true)
     }
     
     func updateHPValue() {
@@ -127,7 +127,7 @@ class TechMonstorViewController: UIViewController {
 
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         util.playBGM("BGM_battle001")
     }
     

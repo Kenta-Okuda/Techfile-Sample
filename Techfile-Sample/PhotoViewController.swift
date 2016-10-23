@@ -24,37 +24,37 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         // Dispose of any resources that can be recreated.
     }
     
-    func precentPickerController(sourceType: UIImagePickerControllerSourceType) {
+    func precentPickerController(_ sourceType: UIImagePickerControllerSourceType) {
         if UIImagePickerController.isSourceTypeAvailable(sourceType) {
             let picker = UIImagePickerController()
             picker.sourceType = sourceType
             picker.delegate = self
-            self.presentViewController(picker, animated: true, completion: nil)
+            self.present(picker, animated: true, completion: nil)
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+        self.dismiss(animated: true, completion: nil)
         
         photoImageView.image = image
     }
     
-    @IBAction func selectButtonTapped(sender: UIButton) {
+    @IBAction func selectButtonTapped(_ sender: UIButton) {
         //選択肢のタイトル、メッセージ、アラートタイプの設定
-        let alertController = UIAlertController(title: "画像の取得先を選択", message: nil, preferredStyle: .ActionSheet)
+        let alertController = UIAlertController(title: "画像の取得先を選択", message: nil, preferredStyle: .actionSheet)
         
         //選択肢の名前と処理
-        let firstAction = UIAlertAction(title: "カメラ", style: .Default) {
+        let firstAction = UIAlertAction(title: "カメラ", style: .default) {
             action in
-            self.precentPickerController(.Camera)
+            self.precentPickerController(.camera)
         }
         
-        let secondAction = UIAlertAction(title: "アルバム", style: .Default) {
+        let secondAction = UIAlertAction(title: "アルバム", style: .default) {
             action in
-            self.precentPickerController(.PhotoLibrary)
+            self.precentPickerController(.photoLibrary)
         }
         
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         
         //選択肢をアラートに登録
         alertController.addAction(firstAction)
@@ -62,11 +62,11 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         alertController.addAction(cancelAction)
         
         //選択肢を表示
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
     //テキストの合成
-    func drawText(image: UIImage) -> UIImage {
+    func drawText(_ image: UIImage) -> UIImage {
         //テキストの内容
         let text = "Life is Tech!"
         
@@ -74,20 +74,20 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         UIGraphicsBeginImageContext(image.size)
         
         //読み込んだ写真の書き出し
-        image.drawInRect(CGRectMake(0, 0, image.size.width, image.size.height))
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
         
         //書き出す位置と大きさ
-        let textRect = CGRectMake(5, 5, image.size.width - 5, image.size.height - 5)
+        let textRect = CGRect(x: 5, y: 5, width: image.size.width - 5, height: image.size.height - 5)
         
         //テキストの特性（フォント、カラー、スタイル）の設定
         let textFontAttributes = [
-            NSFontAttributeName: UIFont.boldSystemFontOfSize(120),
-            NSForegroundColorAttributeName: UIColor.redColor(),
-            NSParagraphStyleAttributeName: NSMutableParagraphStyle.defaultParagraphStyle()
+            NSFontAttributeName: UIFont.boldSystemFont(ofSize: 120),
+            NSForegroundColorAttributeName: UIColor.red,
+            NSParagraphStyleAttributeName: NSMutableParagraphStyle.default
         ]
         
         //指定範囲にテキストを描写
-        text.drawInRect(textRect, withAttributes: textFontAttributes)
+        text.draw(in: textRect, withAttributes: textFontAttributes)
         
         //グラフィックコンテキストの画像を取得
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -95,29 +95,29 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         //グラフィックコンテキストの編集終了
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
     
     //画像の合成
-    func drawMaskImage(image: UIImage) -> UIImage {
+    func drawMaskImage(_ image: UIImage) -> UIImage {
         //グラフィックコンテキストの生成、編集開始
         UIGraphicsBeginImageContext(image.size)
         
         //読み込んだ写真の書き出し
-        image.drawInRect(CGRectMake(0, 0, image.size.width, image.size.height))
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
         
         //マスク画像
         let maskImage = UIImage(named: "lifeistech_logo_1280x720")
         
         //描き出す位置と大きさの設定
         let offset: CGFloat = 50.0
-        let maskRect = CGRectMake(
-            image.size.width - maskImage!.size.width - offset,
-            image.size.height - maskImage!.size.height - offset,
-            maskImage!.size.width, maskImage!.size.height)
+        let maskRect = CGRect(
+            x: image.size.width - maskImage!.size.width - offset,
+            y: image.size.height - maskImage!.size.height - offset,
+            width: maskImage!.size.width, height: maskImage!.size.height)
         
         //指定範囲に画像を描写
-        maskImage!.drawInRect(maskRect)
+        maskImage!.draw(in: maskRect)
         
         //グラフィックコンテキストの取得
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -125,38 +125,38 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         //グラフィックコンテキストの編集終了
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
     
     //アラート
-    func simpleAlert(titleString: String) {
-        let alertController = UIAlertController(title: titleString, message: nil, preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+    func simpleAlert(_ titleString: String) {
+        let alertController = UIAlertController(title: titleString, message: nil, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
         
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func processButtonTapped(sender: UIButton) {
+    @IBAction func processButtonTapped(_ sender: UIButton) {
         guard let selectedPhoto = photoImageView.image else {
             simpleAlert("画像がありません")
             return
         }
         //選択肢のタイトル、メッセージ、アラートタイプの設定
-        let alertController = UIAlertController(title: "合成するパーツを選択", message: nil, preferredStyle: .ActionSheet)
+        let alertController = UIAlertController(title: "合成するパーツを選択", message: nil, preferredStyle: .actionSheet)
         
         //選択肢の名前と処理
-        let firstAction = UIAlertAction(title: "テキスト", style: .Default) {
+        let firstAction = UIAlertAction(title: "テキスト", style: .default) {
             action in
             
             self.photoImageView.image = self.drawText(selectedPhoto)
         }
-        let secondAction = UIAlertAction(title: "LiT!ロゴ", style: .Default) {
+        let secondAction = UIAlertAction(title: "LiT!ロゴ", style: .default) {
             action in
             
             self.photoImageView.image = self.drawMaskImage(selectedPhoto)
         }
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         
         //選択肢をアラートに登録
         alertController.addAction(firstAction)
@@ -164,42 +164,42 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         alertController.addAction(cancelAction)
         
         //選択肢を表示
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
-    func postToSNS(serviceType: String) {
+    func postToSNS(_ serviceType: String) {
         let myComposeView = SLComposeViewController(forServiceType: serviceType)
         
-        myComposeView.setInitialText("PhotoMasterからの投稿！")
-        myComposeView.addImage(photoImageView.image)
-        self.presentViewController(myComposeView, animated: true, completion: nil)
+        myComposeView?.setInitialText("PhotoMasterからの投稿！")
+        myComposeView?.add(photoImageView.image)
+        self.present(myComposeView!, animated: true, completion: nil)
     }
     
-    @IBAction func uploadButtonTapped(sender: UIButton) {
+    @IBAction func uploadButtonTapped(_ sender: UIButton) {
         guard let selectedPhoto = photoImageView.image else {
             simpleAlert("画像がありません")
             return
         }
         //選択肢のタイトル、メッセージ、アラートタイプの設定
-        let alertController = UIAlertController(title: "アップロード先を選択", message: nil, preferredStyle: .ActionSheet)
+        let alertController = UIAlertController(title: "アップロード先を選択", message: nil, preferredStyle: .actionSheet)
         
         //選択肢の名前と処理
-        let firstAction = UIAlertAction(title: "Facebookに投稿", style: .Default) {
+        let firstAction = UIAlertAction(title: "Facebookに投稿", style: .default) {
             action in
             
             self.postToSNS(SLServiceTypeFacebook)
         }
-        let secondAction = UIAlertAction(title: "Twitterに投稿", style: .Default) {
+        let secondAction = UIAlertAction(title: "Twitterに投稿", style: .default) {
             action in
             
             self.postToSNS(SLServiceTypeTwitter)
         }
-        let thirdAction = UIAlertAction(title: "カメラロールに保存", style: .Default) {
+        let thirdAction = UIAlertAction(title: "カメラロールに保存", style: .default) {
             action in
             UIImageWriteToSavedPhotosAlbum(selectedPhoto, self, nil, nil)
             self.simpleAlert("アルバムに保存されました")
         }
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         
         //選択肢をアラートに登録
         alertController.addAction(firstAction)
@@ -208,7 +208,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         alertController.addAction(cancelAction)
         
         //選択肢を表示
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
 
 

@@ -36,7 +36,7 @@ class ClockViewController: UIViewController {
     var image8:UIImage!
     var image9:UIImage!
     
-    var timer:NSTimer!
+    var timer:Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,23 +52,23 @@ class ClockViewController: UIViewController {
         image8 = UIImage(named: "8.png")
         image9 = UIImage(named: "9.png")
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0,target: self,
+        timer = Timer.scheduledTimer(timeInterval: 1.0,target: self,
                                                        selector: #selector(ClockViewController.time),
                                                        userInfo: nil,
                                                        repeats: true)
     }
     func time(){
-        let myDate: NSDate = NSDate()
+        let myDate: Date = Date()
         //カレンダーを取得.
-        let myCalendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let myCalendar: Calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
         //取得するコンポーネントを決める.
-        let myComponetns = myCalendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second],
-                                                 fromDate: myDate)
+        let myComponetns = (myCalendar as NSCalendar).components([NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day, NSCalendar.Unit.hour, NSCalendar.Unit.minute, NSCalendar.Unit.second],
+                                                 from: myDate)
         
-        let hour:Int = myComponetns.hour
-        let minute:Int = myComponetns.minute
-        let second:Int = myComponetns.second
+        let hour:Int = myComponetns.hour!
+        let minute:Int = myComponetns.minute!
+        let second:Int = myComponetns.second!
         
         if (hour>9) {
             hour2 = hour/10

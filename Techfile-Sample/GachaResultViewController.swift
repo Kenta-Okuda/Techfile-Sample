@@ -17,7 +17,7 @@ class GachaResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let number = Int(rand() % 10)   //乱数の生成
+        let number = Int(arc4random() % 10)   //乱数の生成
         print(number)                   //for debug
         
         monsterArray = [
@@ -51,21 +51,21 @@ class GachaResultViewController: UIViewController {
     }
     
     //背景アニメーション
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
         let animation = CABasicAnimation(keyPath: "transform")
-        animation.fromValue = NSNumber(double: 0)                                   //Animation start
-        animation.toValue = NSNumber(double: 2 * M_PI)                              //Animation end
+        animation.fromValue = NSNumber(value: 0 as Double)                                   //Animation start
+        animation.toValue = NSNumber(value: 2 * M_PI as Double)                              //Animation end
         animation.valueFunction = CAValueFunction(name: kCAValueFunctionRotateZ)    //Z軸を中心とした回転
         animation.duration = 5                                                      //アニメーションの早さ
         animation.repeatCount = Float.infinity                                      //アニメーションの繰り返し
-        haikeiImageView.layer.addAnimation(animation, forKey: nil)
+        haikeiImageView.layer.add(animation, forKey: nil)
     }
     
     //もどるButton
     @IBAction func modoru() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 

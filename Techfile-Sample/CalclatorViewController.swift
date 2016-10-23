@@ -35,13 +35,13 @@ class CalclatorViewController: UIViewController {
         label.text = "0"
     }
     
-    func disp(num:Int) {
+    func disp(_ num:Int) {
         number = number * 10
         number += num
         label.text = String(number)
     }
     
-    @IBAction func pushButton(sender: UIButton) {
+    @IBAction func pushButton(_ sender: UIButton) {
         push_btn = Int((sender.titleLabel!.text)!)!
         disp(push_btn)
     }

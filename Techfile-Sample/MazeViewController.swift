@@ -16,7 +16,7 @@ class MazeViewController: UIViewController {
     var speedX: Double = 0.0
     var speedY: Double = 0.0
     
-    let screenSize = UIScreen.mainScreen().bounds.size
+    let screenSize = UIScreen.main.bounds.size
     let maze = [
         [1, 0, 0, 0, 1, 0],
         [1, 0, 1, 0, 1, 0],
@@ -48,16 +48,16 @@ class MazeViewController: UIViewController {
                 switch maze[y][x] {
                 case 1:
                     let wallView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffSetX, offsetY: cellOffSetY + 60)
-                    wallView.backgroundColor = UIColor.blackColor()
+                    wallView.backgroundColor = UIColor.black
                     view.addSubview(wallView)
                     wallRectArray.append(wallView.frame)
                 case 2:
                     startView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffSetX, offsetY: cellOffSetY + 60)
-                    startView.backgroundColor = UIColor.greenColor()
+                    startView.backgroundColor = UIColor.green
                     self.view.addSubview(startView)
                 case 3:
                     goalView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffSetX, offsetY: cellOffSetY + 60)
-                    goalView.backgroundColor = UIColor.redColor()
+                    goalView.backgroundColor = UIColor.red
                     self.view.addSubview(goalView)
                 default:
                     break
@@ -65,9 +65,9 @@ class MazeViewController: UIViewController {
             }
         }
         
-        playerView = UIView(frame: CGRectMake(0, 8, screenSize.width / 60, screenSize.height / 70))
+        playerView = UIView(frame: CGRect(x: 0, y: 8, width: screenSize.width / 60, height: screenSize.height / 70))
         playerView.center = startView.center
-        playerView.backgroundColor = UIColor.grayColor()
+        playerView.backgroundColor = UIColor.gray
         self.view.addSubview(playerView)
         
         playerMotionManager = CMMotionManager()
@@ -81,7 +81,7 @@ class MazeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func createView(x x: Int, y: Int, width: CGFloat, height: CGFloat, offsetX: CGFloat = 0, offsetY: CGFloat = 0) -> UIView {
+    func createView(x: Int, y: Int, width: CGFloat, height: CGFloat, offsetX: CGFloat = 0, offsetY: CGFloat = 0) -> UIView {
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
         let view = UIView(frame: rect)
         
@@ -117,41 +117,41 @@ class MazeViewController: UIViewController {
             }
             
             for wallRect in self.wallRectArray {
-                if (CGRectIntersectsRect(wallRect, self.playerView.frame)) {
+                if (wallRect.intersects(self.playerView.frame)) {
                     self.gameCheck("GameOver", message: "壁に当たりました")
                     return
                 }
             }
-            if (CGRectIntersectsRect(self.goalView.frame, self.playerView.frame)) {
+            if (self.goalView.frame.intersects(self.playerView.frame)) {
                 self.gameCheck("Clear", message: "クリアしました!")
                 return
             }
             
-            self.playerView.center = CGPointMake(posX, posY)
-        }
-        playerMotionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: handler)
+            self.playerView.center = CGPoint(x: posX, y: posY)
+        } as! CMAccelerometerHandler
+        playerMotionManager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: handler)
     }
     
-    func gameCheck(result: String, message: String) {
-        if playerMotionManager.accelerometerActive {
+    func gameCheck(_ result: String, message: String) {
+        if playerMotionManager.isAccelerometerActive {
             playerMotionManager.stopAccelerometerUpdates()
         }
         
-        let gameCheckAlert: UIAlertController = UIAlertController(title: result, message: message, preferredStyle: .Alert)
+        let gameCheckAlert: UIAlertController = UIAlertController(title: result, message: message, preferredStyle: .alert)
         
-        let retryAction = UIAlertAction(title: "もう一度", style: .Default) {
+        let retryAction = UIAlertAction(title: "もう一度", style: .default) {
             action in
             self.retry()
         }
         
         gameCheckAlert.addAction(retryAction)
-        self.presentViewController(gameCheckAlert, animated: true, completion: nil)
+        self.present(gameCheckAlert, animated: true, completion: nil)
     }
     
     func retry() {
         playerView.center = startView.center
         
-        if !playerMotionManager.accelerometerActive {
+        if !playerMotionManager.isAccelerometerActive {
             self.startAccelerometer()
         }
         speedX = 0

@@ -14,12 +14,12 @@ class AddViewController: UIViewController {
     @IBOutlet var japaneseTextField: UITextField!
     
     var wordArray: [AnyObject] = []
-    let saveData = NSUserDefaults.standardUserDefaults()
+    let saveData = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveData.arrayForKey("WORD") != nil {
-            wordArray = saveData.arrayForKey("WORD")!
+        if saveData.array(forKey: "WORD") != nil {
+            wordArray = saveData.array(forKey: "WORD")! as [AnyObject]
         }
     }
     
@@ -30,26 +30,26 @@ class AddViewController: UIViewController {
     
     @IBAction func saveWord() {
         if englishTextField.text == "" || japaneseTextField.text == "" {
-            let alert = UIAlertController(title: "入力エラー", message: "全ての欄に入力してください", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "入力エラー", message: "全ての欄に入力してください", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         } else {
             let wordDictionary = ["english": englishTextField.text!, "japanese": japaneseTextField.text!]
             
-            wordArray.append(wordDictionary)
-            saveData.setObject(wordArray, forKey: "WORD")
+            wordArray.append(wordDictionary as AnyObject)
+            saveData.set(wordArray, forKey: "WORD")
             
-            let alert = UIAlertController(title: "保存完了", message: "単語の登録が完了しました", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            let alert = UIAlertController(title: "保存完了", message: "単語の登録が完了しました", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             englishTextField.text = ""
             japaneseTextField.text = ""
         }
     }
     
     @IBAction func modoru() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
     /*

@@ -18,11 +18,11 @@ class ClapViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let soundFilePath = NSBundle.mainBundle().pathForResource("clap", ofType: "wav")
-        let fileURL = NSURL(fileURLWithPath: soundFilePath!)
+        let soundFilePath = Bundle.main.path(forResource: "clap", ofType: "wav")
+        let fileURL = URL(fileURLWithPath: soundFilePath!)
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: fileURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
         } catch {
             print("音楽ファイルが読み込めませんでした")
         }
@@ -36,19 +36,19 @@ class ClapViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // Dispose of any resources that can be recreated.
     }
     //カテゴリ
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     //選択肢
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 10
     }
     //表示内容
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(row+1)回"
     }
     //選択中のボタン
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         soundCount = row
     }
     

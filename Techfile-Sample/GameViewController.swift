@@ -16,11 +16,11 @@ class GameViewController: UIViewController {
     
     @IBOutlet var resultLabel: UILabel!
     
-    var timer: NSTimer!
+    var timer: Timer!
     var score: Int = 0
-    let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()    //スコア保存
+    let defaults: UserDefaults = UserDefaults.standard    //スコア保存
     
-    let width: CGFloat = UIScreen.mainScreen().bounds.size.width            //画面の幅を取得
+    let width: CGFloat = UIScreen.main.bounds.size.width            //画面の幅を取得
     var positionX: [CGFloat] = [0.0, 0.0, 0.0]
     //棒の幅指定(設定値を変えることにより、１クロックでの移動幅を変更する)
     var dx: [CGFloat] = [1.0, 0.5, -1.0]
@@ -32,14 +32,14 @@ class GameViewController: UIViewController {
     
     func start() {
         initData()
-        resultLabel.hidden = true   //ラベルの非表示
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.005, target: self, selector: #selector(GameViewController.up), userInfo: nil, repeats: true)
+        resultLabel.isHidden = true   //ラベルの非表示
+        timer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(GameViewController.up), userInfo: nil, repeats: true)
         timer.fire()
     }
 
 //TODO:      ストップボタンのタップ後、ブロックの停止位置を固定する
     @IBAction func stop() {
-        if timer.valid == true {
+        if timer.isValid == true {
             timer.invalidate()      //タイマーの停止
             for i in 0..<3 {
                 print(positionX[i]) //for debug
@@ -49,30 +49,30 @@ class GameViewController: UIViewController {
 //            imgView2.center.x = positionX[1]
 //            imgView3.center.x = positionX[2]
             resultLabel.text = "Score: " + String(score)
-            resultLabel.hidden = false
+            resultLabel.isHidden = false
             saveScore()
         }
     }
     
     func saveScore() {
-        let highScore1: Int = defaults.integerForKey("score1")
-        let highScore2: Int = defaults.integerForKey("score2")
-        let highScore3: Int = defaults.integerForKey("score3")
+        let highScore1: Int = defaults.integer(forKey: "score1")
+        let highScore2: Int = defaults.integer(forKey: "score2")
+        let highScore3: Int = defaults.integer(forKey: "score3")
         
         if score > highScore1 {
-            defaults.setInteger(score, forKey: "score1")
-            defaults.setInteger(highScore1, forKey: "score2")
-            defaults.setInteger(highScore2, forKey: "score3")
+            defaults.set(score, forKey: "score1")
+            defaults.set(highScore1, forKey: "score2")
+            defaults.set(highScore2, forKey: "score3")
         } else if score > highScore2 {
-            defaults.setInteger(score, forKey: "score2")
-            defaults.setInteger(highScore2, forKey: "score3")
+            defaults.set(score, forKey: "score2")
+            defaults.set(highScore2, forKey: "score3")
         } else if score > highScore3 {
-            defaults.setInteger(score, forKey: "socre3")
+            defaults.set(score, forKey: "socre3")
         }
     }
     
     @IBAction func toTop() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 //FIXME:     リトライボタンを複数回タップすると、移動速度が上がり停止できなくなる。

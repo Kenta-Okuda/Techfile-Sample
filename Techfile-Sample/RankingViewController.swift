@@ -14,18 +14,18 @@ class RankingViewController: UIViewController {
     @IBOutlet var rankLabel2: UILabel!
     @IBOutlet var rankLabel3: UILabel!
     
-    let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    let defaults: UserDefaults = UserDefaults.standard
     
     @IBAction func toTop() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        rankLabel1.text = String(defaults.integerForKey("score1"))
-        rankLabel2.text = String(defaults.integerForKey("score2"))
-        rankLabel3.text = String(defaults.integerForKey("score3"))
+        rankLabel1.text = String(defaults.integer(forKey: "score1"))
+        rankLabel2.text = String(defaults.integer(forKey: "score2"))
+        rankLabel3.text = String(defaults.integer(forKey: "score3"))
     }
 
     override func didReceiveMemoryWarning() {

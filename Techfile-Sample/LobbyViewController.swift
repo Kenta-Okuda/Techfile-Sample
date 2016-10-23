@@ -12,7 +12,7 @@ import AVFoundation
 class LobbyViewController: UIViewController, AVAudioPlayerDelegate {
     
     var stamina: Float = 0
-    var staminaTimer: NSTimer!
+    var staminaTimer: Timer!
     var util: TechDraUtility!
     var player: Player!
     
@@ -24,10 +24,10 @@ class LobbyViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewDidLoad()
         
         player = Player()
-        staminaBar.transform = CGAffineTransformMakeScale(1.0, 4.0)
+        staminaBar.transform = CGAffineTransform(scaleX: 1.0, y: 4.0)
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let level: Int = userDefaults.integerForKey("lebel")
+        let userDefaults = UserDefaults.standard
+        let level: Int = userDefaults.integer(forKey: "lebel")
         
         nameLabel.text = player.name
         levelLabel.text = String(format: "Lv. %d", level + 1)
@@ -37,7 +37,7 @@ class LobbyViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func cureStamina() {
-        staminaTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.updateStaminaValue), userInfo: nil, repeats: true)
+        staminaTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateStaminaValue), userInfo: nil, repeats: true)
         staminaTimer.fire()
     }
     
@@ -48,12 +48,12 @@ class LobbyViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         util.playBGM("lobby")
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         util.stopBGM()
     }
 
